@@ -3,5 +3,6 @@ out/
 .cache/
 .idea/
 .vscode/
+.xmake/
 
 compile_commands.json

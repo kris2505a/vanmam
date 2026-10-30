@@ -1,3 +1,0 @@
-[submodule "mira/thirdparty/glfw"]
-	path = mira/thirdparty/glfw
-	url = https://github.com/glfw/glfw.git
