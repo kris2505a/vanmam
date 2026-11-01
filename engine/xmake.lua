@@ -1,35 +1,31 @@
+-- 1. Include subdirectories outside of the target definition
+includes("src/core")
+includes("src/platform")
+includes("deps/glfw")
+
+-- 2. Define the engine target
 target("engine")
     set_kind("shared")
 
-    add_files("src/Engine.cpp")
-    add_headerfiles("src/Engine.h")
+    -- Depend on the GLFW target defined inside deps/glfw/xmake.lua
+    -- This handles target ordering, include inheritance, and library paths automatically.
+    add_deps("GLFW")
 
-    add_includedirs("src", {
-        public = true
-    })
+    add_includedirs("src", {public = true})
 
-    add_syslinks("d3d12", "dxgi", "dxguid", {
-        public = true
-    })
-
-    local defines = {
-        "VM_SHARE_BUILD",
-        "WIN32_LEAN_AND_MEAN",
-        "NOMINMAX",
-        "PROJECT_NAME=\"vanmam\""
-    }
+    -- Defines
+    add_defines("VM_SHARE_BUILD", "PROJECT_NAME=\"vanmam\"")
 
     if is_mode("debug") then
-        table.insert(defines, "VM_DEBUG")
+        add_defines("VM_DEBUG")
     elseif is_mode("release") then
-        table.insert(defines, "VM_RELEASE")
+        add_defines("VM_RELEASE")
     end
 
-    add_defines(defines)
+    if is_plat("linux") then 
+        add_defines("VM_PLATFORM_LINUX")
+    end
 
-
-
+    -- Output directories
     set_targetdir("$(projectdir)/bin/$(mode)")
     set_objectdir("$(projectdir)/obj/$(mode)/$(name)")
-    
-    includes("src/core")

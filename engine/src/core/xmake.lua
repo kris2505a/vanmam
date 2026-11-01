@@ -6,7 +6,9 @@ target("engine")
 
     local headers = {
         "types/types.h",
-        "logger/log.h"
+        "logger/log.h",
+        "types/error.h",
+        "types/result.h"
     }
 
     add_files(sources)

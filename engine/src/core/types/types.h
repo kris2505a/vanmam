@@ -3,7 +3,6 @@
 #include <cstdint>
 
 #include <memory>
-#include <wrl/client.h>
 
 
 NS_VANMAM
@@ -29,7 +28,6 @@ constexpr scope<T> new_scope(Args&&... args) {
     return std::make_unique<T>(args...);
 }
 
-
 template <typename T>
 using strong_ref = std::shared_ptr<T>;
 
@@ -41,7 +39,5 @@ constexpr strong_ref<T> new_strong_ref (Args&&... args) {
 template <typename T>
 using weak_ref = std::weak_ptr<T>;
 
-template <typename T>
-using com_ref = Microsoft::WRL::ComPtr<T>;
 
 END_NS

@@ -1,0 +1,8 @@
+{
+    errdata = "In file included from engine/src/platform/cross_window/cross_window.cpp:1:\
+\27[1mengine/src/platform/cross_window/cross_window.h:19:10: \27[0m\27[0;1;35mwarning: \27[0m\27[1mprivate field '_context_initialized' is not used [-Wunused-private-field]\27[0m\
+   19 |     \27[0;34mbool\27[0m _context_initialized;\27[0m\
+      | \27[0;1;32m         ^\
+\27[0m1 warning generated.\
+"
+}
