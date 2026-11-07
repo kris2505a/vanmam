@@ -1,11 +1,7 @@
 bin/
-out/
 obj/
-build/
-.cache/
-.idea/
-.vscode/
-.xmake/
 .vs/
 
-compile_commands.json
+*.sln
+*.vcxproj
+*.user

@@ -15,9 +15,9 @@ public:
     u32 get_height() const;
     std::string_view get_title() const;
 
-    static result <scope<window>, error> create_new(u32 width, u32 height, std::string_view title);
+    //static result <scope<window>, error> create_new(u32 width, u32 height, std::string_view title);
 
-    virtual bool poll_events() = 0;
+    //virtual bool poll_events() = 0;
 
 
 protected:

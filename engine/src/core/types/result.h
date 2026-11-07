@@ -22,7 +22,7 @@ public:
     result(const result& other) = delete;
     result& operator=(const result& other) = delete;
 
-    result(result&& other)
+    result(result&& other) 
         : _has_value(other._has_value) {
         if (_has_value) {
             new (&_val) T_Val(std::move(other._val));

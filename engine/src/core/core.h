@@ -2,7 +2,7 @@
 
 #if defined(_WIN32) || defined(__CYGWIN__)
 
-    #ifdef VM_SHARE_BUILD
+    #ifdef VM_SHARED_BUILD
         #define VANMAM_API __declspec(dllexport)
     #else
         #define VANMAM_API __declspec(dllimport)
