@@ -1,3 +1,0 @@
-[submodule "engine/deps/glfw"]
-	path = engine/deps/glfw
-	url = git@github.com:kris2505a/glfw.git
