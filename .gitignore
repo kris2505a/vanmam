@@ -6,5 +6,6 @@ build/
 .idea/
 .vscode/
 .xmake/
+.vs/
 
 compile_commands.json
