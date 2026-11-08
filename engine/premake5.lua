@@ -19,7 +19,10 @@ project "engine"
   include "src/platform"
 
   filter "system:windows"
-	defines "PF_WINDOWS"
+	defines {
+		"PF_WINDOWS",
+		"WIN32_LEAN_AND_MEAN"
+	}
 	links {
 		"d3d12",
 		"dxgi",

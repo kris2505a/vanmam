@@ -18,4 +18,11 @@
 #define NS(x) namespace vm::x {
 #define NS_VANMAM namespace vm {
 
+
+#ifdef VM_DEBUG 
+    #define VM_ASSERT(x) if (!(x)) __debugbreak();
+#else
+    #define VM_ASSERT(x)
+#endif
+
 #define END_NS }
