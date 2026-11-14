@@ -1,6 +1,7 @@
 #include "win32_window.h"
 #include "core/logger/log.h"
 
+
 #include <windowsx.h>
 
 NS(pf)
@@ -11,7 +12,7 @@ result<scope<window>, error> window::create_new(const window_create_info& create
 	win->setup_window_class();
 	win->create_window();
 
-	if (!win->get_handle()) {
+	if (!win->get_hwnd()) {
 		return result<scope<window>, error>::failure({ "Failed to create window" });
 	}
 
@@ -24,12 +25,12 @@ win32_window::win32_window(const window_create_info& create_info)
 	: window(create_info), _window_class({}), _class_name(L"vanmam") {}
 
 win32_window::~win32_window() {
-	DestroyWindow(_handle);
+	DestroyWindow(_native_handle.handle);
 }
 
 void win32_window::pump_events() {
 	MSG msg = { 0 };
-	while (PeekMessageW(&msg, _handle, 0, 0, PM_REMOVE)) {
+	while (PeekMessageW(&msg, _native_handle.handle, 0, 0, PM_REMOVE)) {
 		TranslateMessage(&msg);
 		DispatchMessageW(&msg);
 	}
@@ -37,7 +38,7 @@ void win32_window::pump_events() {
 
 LRESULT CALLBACK win32_window::win_proc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
 
-	win32_window* win = reinterpret_cast<win32_window*>(GetWindowLongPtrA(hwnd, GWLP_USERDATA));
+	win32_window* win = reinterpret_cast<win32_window*>(GetWindowLongPtrW(hwnd, GWLP_USERDATA));
 
 	if (!win) {
 		VM_LOG(VM_ERR, "Failed to retrieve long ptr to window object. Defaulting to DefWindowProc");
@@ -170,7 +171,7 @@ void win32_window::create_window() {
 		_native_handle.instance,
 		nullptr
 	);
-	SetWindowLongPtrA(_native_handle.handle, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(this));
+	SetWindowLongPtrW(_native_handle.handle, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(this));
 }
 
 void win32_window::show_window(){
@@ -305,8 +306,12 @@ key_code win32_window::to_key_code(WPARAM vk, LPARAM data) {
 	}
 }
 
-const native_handle& win32_window::get_native_handle() const {
-	return _native_handle;
+const native_handle* win32_window::get_native_handle() const {
+	return &_native_handle;
+}
+
+HWND win32_window::get_hwnd() const {
+    return _native_handle.handle;
 }
 
 END_NS

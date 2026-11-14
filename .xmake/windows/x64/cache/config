@@ -1,0 +1,18 @@
+{
+    mtimes = {
+        ["engine\\src\\core\\xmake.lua"] = 1794631992,
+        ["xmake.lua"] = 1794634994,
+        ["engine\\src\\event\\xmake.lua"] = 1794632041,
+        ["engine\\xmake.lua"] = 1794635171,
+        ["engine\\src\\render_hw\\xmake.lua"] = 1794632462,
+        ["sandbox\\xmake.lua"] = 1794632531,
+        ["engine\\src\\platform\\xmake.lua"] = 1794632257
+    },
+    options = {
+        builddir = "build",
+        mode = "debug",
+        plat = "windows",
+        arch = "x64"
+    },
+    recheck = false
+}

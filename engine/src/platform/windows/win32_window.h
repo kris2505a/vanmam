@@ -17,7 +17,8 @@ public:
 	void show_window();
 
 	static key_code to_key_code(WPARAM vk, LPARAM data);
-	const native_handle& get_native_handle() const override;
+	const native_handle* get_native_handle() const override;
+    HWND get_hwnd() const;
 
 
 private:
