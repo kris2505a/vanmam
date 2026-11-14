@@ -6,6 +6,11 @@
 #include <ostream>
 #include <format>
 
+#ifdef PF_WINDOWS
+#include <windows.h>
+#include <comdef.h>
+#endif
+
 
 NS_VANMAM
 
@@ -14,6 +19,21 @@ public:
     error(std::string_view error, const std::source_location& location = std::source_location::current()) 
         : _error(error), _file(location.file_name()), _func_called(location.function_name()), _line(location.line()) {}  
     ~error() = default;
+
+#ifdef PF_WINDOWS
+	error(HRESULT hr, const std::source_location& location = std::source_location::current())
+		: _file(location.file_name()), _func_called(location.function_name()), _line(location.line()) {
+
+        _com_error err(hr);
+
+        std::wstring msg = err.ErrorMessage();
+        _error = to_narrow(msg);
+	}
+
+    HRESULT get_hr() const {
+        return _hr;
+    }
+#endif
 
     std::string_view get_error() const {
         return _error;
@@ -36,6 +56,9 @@ private:
     std::string _file;
     std::string _func_called;
     u32 _line;
+#ifdef PF_WINDOWS
+    HRESULT _hr {};
+#endif
 };
 
 END_NS
@@ -50,7 +73,7 @@ struct std::formatter<vm::error> {
     auto format(const vm::error& err, std::format_context& ctx) const {
         return std::format_to(
             ctx.out(),
-            "{} | {} : {} : {}",
+            "{} | {} ({}:{})",
             err.get_error(),
             err.get_func_name(),
             err.get_file(),

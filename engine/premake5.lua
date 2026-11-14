@@ -15,18 +15,22 @@ project "engine"
 	  "src/"
   }
 
-  include "src/core"
-  include "src/platform"
+  for _, dir in ipairs(os.matchdirs("src/*")) do
+	if os.isfile(dir .. "/premake5.lua") then
+	  include(dir)
+	end
+  end
 
   filter "system:windows"
 	defines {
 		"PF_WINDOWS",
-		"WIN32_LEAN_AND_MEAN"
+		"WIN32_LEAN_AND_MEAN",
+		"NOMINMAX"
 	}
 	links {
-		"d3d12",
+		"d3d11",
 		"dxgi",
-		"dxguid"
+		"d3dcompiler"
 	}
   
   filter "system:linux"

@@ -4,8 +4,8 @@
 NS(pf)
 
 
-window::window(u32 width, u32 height, std::string_view title)
-    : _width(width), _heigh(height), _title(title) {}
+window::window(const window_create_info& create_info)
+    : _width(create_info.width), _heigh(create_info.height), _title(create_info.title), _callback(create_info.callback) {}
 
 
 u32 window::get_width() const {

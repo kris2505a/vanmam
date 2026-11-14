@@ -5,5 +5,7 @@ files {
     "types/result.h",
 
     "logger/log.h",
-    "logger/log.cpp"    
+    "logger/log.cpp",
+
+    "input/input_code.h"
 }
