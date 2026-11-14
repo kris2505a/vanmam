@@ -7,6 +7,7 @@
 #include "event/dispatcher.h"
 
 #include "render_hw/device.h"
+#include "render_hw/swapchain.h"
 
 
 void print_result(vm::result<vm::u32, std::string>& res) {
@@ -50,6 +51,7 @@ int main() {
     if (!res.has_value()) {
         auto err = res.get_error();
         VM_LOG(VM_FAT, "{}", err);
+        return -1;
     }
     
     auto window = res.get_value();
@@ -58,14 +60,31 @@ int main() {
 
     if (!dev_res.has_value()) {
         VM_LOG(VM_FAT, "{}", dev_res.get_error());
+        return -1;
     }
 
     auto device = dev_res.get_value();
 
+    vm::rh::swapchain_info sc_info {
+        .width = 1280,
+        .height = 720,
+        .buffer_count = 2,
+        .handle = window->get_native_handle()
+    };
+
+    auto swch_res = vm::rh::swapchain::create_new(sc_info, *device);
+
+    if (!swch_res.has_value()) {
+        VM_LOG(VM_FAT, "{}", swch_res.get_error());
+        return -1;
+    }
+
+    auto swapchain = swch_res.get_value();
 
 
     while (running) {
         window->pump_events();
+        swapchain->present();
     }
 }
 

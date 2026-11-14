@@ -9,6 +9,8 @@ NS(rh)
 
 class VANMAM_API device {
 public:
+
+    virtual ~device() = default;
 	static result <scope<device>, error> create_new();
 
 	template <typename T>

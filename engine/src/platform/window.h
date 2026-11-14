@@ -33,7 +33,7 @@ public:
 
     virtual void pump_events() = 0;
 
-    virtual const native_handle& get_native_handle() const = 0;
+    virtual const native_handle* get_native_handle() const = 0;
 
 
 protected:

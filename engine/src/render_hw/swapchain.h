@@ -12,12 +12,16 @@ struct swapchain_info {
 	u32 width;
 	u32 height;
 	u32 buffer_count;
-	pf::native_handle handle;
+	const pf::native_handle* handle;
 };
 
 
 class VANMAM_API swapchain {
 public:
+    virtual ~swapchain() = default;
+
+	virtual void present() = 0;
+
 	static result<scope<swapchain>, error> create_new(const swapchain_info& info_, device& device_);
 
 	template <typename T>
