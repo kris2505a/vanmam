@@ -5,7 +5,6 @@ target("engine")
     "logger/log.h",
 
     "types/error.h",
-    "types/result.h",
     "types/types.h",
 
     "core.h"

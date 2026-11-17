@@ -1,8 +1,8 @@
 set_project("vanmam")
 set_version("0.1.0")
-set_languages("c++20")
+set_languages("cxx23")
+set_toolchains("clang")
 
--- Prevent xmake from auto-probing external toolchains/SDKs
 add_rules("mode.debug", "mode.release")
 add_rules("plugin.compile_commands.autoupdate", {
     outputdir = "."
@@ -10,6 +10,7 @@ add_rules("plugin.compile_commands.autoupdate", {
 
 add_defines("_UNICODE", "UNICODE")
 
-add_cxflags("/W4", "/wd4251", "/wd4273", { tools = "cl" })
+add_cxflags("-Wall", "-Wextra", "-Wpedantic", { tools = "clang" })
+
 includes("engine")
 includes("sandbox")

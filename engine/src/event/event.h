@@ -81,7 +81,8 @@ struct mouse_scroll : event {
 };
 
 struct quit : event {
-	quit() : event(event_type::quit) {};
+	u32 exit_code;
+	quit(u32 code = 0) : event(event_type::quit), exit_code(code) {};
 	static bool is_same(event_type type) {
 		return type == event_type::quit;
 	}

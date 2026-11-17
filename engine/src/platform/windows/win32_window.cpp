@@ -13,12 +13,12 @@ result<scope<window>, error> window::create_new(const window_create_info& create
 	win->create_window();
 
 	if (!win->get_hwnd()) {
-		return result<scope<window>, error>::failure({ "Failed to create window" });
+		return failure { error{ "Failed to create window" } };
 	}
 
 	win->show_window();
 
-	return result<scope<window>, error>::success(std::move(win));
+	return std::move(win);
 }
 
 win32_window::win32_window(const window_create_info& create_info)
@@ -29,7 +29,7 @@ win32_window::~win32_window() {
 }
 
 void win32_window::pump_events() {
-	MSG msg = { 0 };
+	MSG msg = {};
 	while (PeekMessageW(&msg, _native_handle.handle, 0, 0, PM_REMOVE)) {
 		TranslateMessage(&msg);
 		DispatchMessageW(&msg);
@@ -152,7 +152,7 @@ void win32_window::setup_window_class() {
 		.cbSize = sizeof(WNDCLASSEXW),
 		.lpfnWndProc = win32_window::win_proc,
 		.hInstance = _native_handle.instance,
-		.lpszClassName = _class_name.c_str(),
+		.lpszClassName = _class_name.c_str()
 	};
 	RegisterClassExW(&_window_class);
 }

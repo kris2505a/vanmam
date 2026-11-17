@@ -1,12 +1,11 @@
 #pragma once
 #include "core/core.h"
 #include "core/types/types.h"
-#include <string>
-#include "core/types/result.h"
 #include "core/types/error.h"
 #include "event/event.h"
 
 #include <functional>
+
 
 #include "native_handle.h"
 
