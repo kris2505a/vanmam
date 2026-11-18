@@ -1,7 +1,0 @@
-{
-    errdata = "engine\\src\\platform\\windows\\win32_window.cpp:156:2: warning: missing field 'style' initializer [-Wmissing-designated-field-initializers]\
-  156 |  };\
-      |  ^\
-1 warning generated.\
-"
-}
