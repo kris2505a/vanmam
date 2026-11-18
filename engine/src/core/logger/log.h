@@ -20,7 +20,7 @@ enum class log_type {
 #define VM_ERR vm::log_type::error
 #define VM_FAT vm::log_type::fatal
 
-#define VM_LOG(type, msg, ...) vm::core_log::format_and_log(PROJECT_NAME, type, msg, __VA_ARGS__)
+#define VM_LOG(type, msg, ...) vm::core_log::format_and_log(PROJECT_NAME, type, msg __VA_OPT__(,) __VA_ARGS__)
 
 class VANMAM_API core_log {
 public:

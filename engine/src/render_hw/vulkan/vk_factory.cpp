@@ -5,7 +5,7 @@ VULKAN_HPP_DEFAULT_DISPATCH_LOADER_DYNAMIC_STORAGE
 
 
 vm::result<vm::scope<vm::rh::factory>, vm::error> vm::rh::factory::create_new() {
-    auto res = rh::vuk::factory::internal_create_new();
+    auto res = rh::vlk::factory::internal_create_new();
     if (!res) {
         return failure<vm::error>(res.error());
     }
@@ -13,7 +13,11 @@ vm::result<vm::scope<vm::rh::factory>, vm::error> vm::rh::factory::create_new() 
 }
 
 
-NS(rh::vuk)
+NS(rh::vlk)
+
+const vk::Instance& factory::instance() const {
+    return _instance;
+}
 
 result <factory*, error> factory::internal_create_new() {
     VULKAN_HPP_DEFAULT_DISPATCHER.init(vkGetInstanceProcAddr);
@@ -180,6 +184,10 @@ vk::Result factory::setup_debug_messenger() {
     auto [res, messenger] = _instance.createDebugUtilsMessengerEXT(create_info);
     _debug_messenger = std::move(messenger);
     return res;
+}
+
+const std::vector<const char*> factory::get_required_extensions() const {
+    return _extensions;
 }
 
 factory::~factory() {

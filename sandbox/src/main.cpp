@@ -5,6 +5,7 @@
 #include "event/dispatcher.h"
 
 #include "render_hw/factory.h"
+#include "render_hw/device.h"
 
 
 bool running = true;
@@ -44,6 +45,18 @@ int main() {
         VM_LOG(VM_FAT, "Failed to create factory: {}", err);
         return -1;
     }
+
+    auto factory = std::move(*fact_res);
+
+    auto dev_res = vm::rh::device::create_new(factory.get());
+
+    if (!dev_res) {
+        auto err = dev_res.error();
+        VM_LOG(VM_FAT, "Failed to create device: {}", err);
+        return -1;
+    }
+
+    auto device = std::move(*dev_res);
 
     while (running) {
         window->pump_events();

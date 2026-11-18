@@ -1,0 +1,31 @@
+[
+{
+  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
+  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Iengine\\src", "-IC:\\VulkanSDK\\1.4.363.1\\Include", "-D_UNICODE", "-DUNICODE", "-DVULKAN_HPP_NO_STRUCT_CONSTRUCTORS", "-DVULKAN_HPP_NO_EXCEPTIONS", "-DVULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1", "-DVM_SHARED_BUILD", "-DPROJECT_NAME=\"vanmam\"", "-DVM_DEBUG", "-DPF_WINDOWS", "-DWIN32_LEAN_AND_MEAN", "-DNOMINMAX", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\engine\\mingw\\x64\\debug\\engine\\src\\core\\logger\\log.cpp.obj", "engine\\src\\core\\logger\\log.cpp"],
+  "file": "engine\\src\\core\\logger\\log.cpp"
+},
+{
+  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
+  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Iengine\\src", "-IC:\\VulkanSDK\\1.4.363.1\\Include", "-D_UNICODE", "-DUNICODE", "-DVULKAN_HPP_NO_STRUCT_CONSTRUCTORS", "-DVULKAN_HPP_NO_EXCEPTIONS", "-DVULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1", "-DVM_SHARED_BUILD", "-DPROJECT_NAME=\"vanmam\"", "-DVM_DEBUG", "-DPF_WINDOWS", "-DWIN32_LEAN_AND_MEAN", "-DNOMINMAX", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\engine\\mingw\\x64\\debug\\engine\\src\\platform\\window.cpp.obj", "engine\\src\\platform\\window.cpp"],
+  "file": "engine\\src\\platform\\window.cpp"
+},
+{
+  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
+  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Iengine\\src", "-IC:\\VulkanSDK\\1.4.363.1\\Include", "-D_UNICODE", "-DUNICODE", "-DVULKAN_HPP_NO_STRUCT_CONSTRUCTORS", "-DVULKAN_HPP_NO_EXCEPTIONS", "-DVULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1", "-DVM_SHARED_BUILD", "-DPROJECT_NAME=\"vanmam\"", "-DVM_DEBUG", "-DPF_WINDOWS", "-DWIN32_LEAN_AND_MEAN", "-DNOMINMAX", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\engine\\mingw\\x64\\debug\\engine\\src\\platform\\windows\\win32_window.cpp.obj", "engine\\src\\platform\\windows\\win32_window.cpp"],
+  "file": "engine\\src\\platform\\windows\\win32_window.cpp"
+},
+{
+  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
+  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Iengine\\src", "-IC:\\VulkanSDK\\1.4.363.1\\Include", "-D_UNICODE", "-DUNICODE", "-DVULKAN_HPP_NO_STRUCT_CONSTRUCTORS", "-DVULKAN_HPP_NO_EXCEPTIONS", "-DVULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1", "-DVM_SHARED_BUILD", "-DPROJECT_NAME=\"vanmam\"", "-DVM_DEBUG", "-DPF_WINDOWS", "-DWIN32_LEAN_AND_MEAN", "-DNOMINMAX", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\engine\\mingw\\x64\\debug\\engine\\src\\render_hw\\vulkan\\vk_device.cpp.obj", "engine\\src\\render_hw\\vulkan\\vk_device.cpp"],
+  "file": "engine\\src\\render_hw\\vulkan\\vk_device.cpp"
+},
+{
+  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
+  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Iengine\\src", "-IC:\\VulkanSDK\\1.4.363.1\\Include", "-D_UNICODE", "-DUNICODE", "-DVULKAN_HPP_NO_STRUCT_CONSTRUCTORS", "-DVULKAN_HPP_NO_EXCEPTIONS", "-DVULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1", "-DVM_SHARED_BUILD", "-DPROJECT_NAME=\"vanmam\"", "-DVM_DEBUG", "-DPF_WINDOWS", "-DWIN32_LEAN_AND_MEAN", "-DNOMINMAX", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\engine\\mingw\\x64\\debug\\engine\\src\\render_hw\\vulkan\\vk_factory.cpp.obj", "engine\\src\\render_hw\\vulkan\\vk_factory.cpp"],
+  "file": "engine\\src\\render_hw\\vulkan\\vk_factory.cpp"
+},
+{
+  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
+  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Isandbox\\src", "-Iengine\\src", "-D_UNICODE", "-DUNICODE", "-DPROJECT_NAME=\"testbed\"", "-DPF_WINDOWS", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\sandbox\\mingw\\x64\\debug\\sandbox\\src\\main.cpp.obj", "sandbox\\src\\main.cpp"],
+  "file": "sandbox\\src\\main.cpp"
+}]

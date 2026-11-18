@@ -3,7 +3,7 @@
 
 #include <vulkan/vulkan.hpp>
 
-NS(rh::vuk) 
+NS(rh::vlk) 
 
 class factory : public rh::factory {
 public:
@@ -11,6 +11,8 @@ public:
     ~factory();
     const std::vector<const char*> get_required_extensions() const;
     static result <factory*, error> internal_create_new();
+
+    const vk::Instance& instance() const;
 
 private:
     vk::Result create_instance();
@@ -27,8 +29,8 @@ private:
     );
 
 private:
-    vk::Instance _instance;
-    vk::DebugUtilsMessengerEXT _debug_messenger;
+    vk::Instance _instance = nullptr;
+    vk::DebugUtilsMessengerEXT _debug_messenger = nullptr;
     std::vector<const char*> _extensions;
     std::vector<const char*> _layers;
 };
