@@ -19,21 +19,22 @@ void handle_event(vm::ev::event& e) {
 
 int main() {
     
-    auto info = vm::pf::window_create_info{
+    auto info = vm::pf::window_create_info {
         .width = 1280,
         .height = 720,
         .title = "vanmam",
         .callback = std::bind(handle_event, std::placeholders::_1)
     };
 
-    auto res = vm::pf::window::create_new(info);
-    if (!res.has_value()) {
-        auto err = res.error();
-        VM_LOG(VM_FAT, "{}", err);
+    auto [res, window] = vm::pf::window::create_new(info);
+
+    if (res != vm::status::success) {
+
+        if (res == vm::status::failed_to_create_win32_window) {
+            VM_LOG(VM_FAT, "Failed to create win32_window");
+        }
         return -1;
     }
-    
-    auto window = std::move(*res);
 
     while (running) {
         window->pump_events();

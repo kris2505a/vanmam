@@ -12,8 +12,8 @@ target_sources(engine PRIVATE
     "logger.h"
 
     # Types
-    "types/error.h"
     "types/wrap_types.h"
+    "types/result.h"
     "types.h"
 
     # Event

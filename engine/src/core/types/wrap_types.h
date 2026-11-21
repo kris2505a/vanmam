@@ -4,7 +4,6 @@
 
 #include <memory>
 #include <string>
-#include <expected>
 
 
 #ifdef PF_WINDOWS
@@ -31,11 +30,6 @@ using i64 = std::int64_t;
 using f32 = float;
 using f64 = double;
 
-template <typename T, typename E>
-using result = std::expected<T, E>;
-
-template <typename E>
-using failure = std::unexpected<E>;
 
 template <typename T>
 using scope = std::unique_ptr<T>;

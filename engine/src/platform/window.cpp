@@ -4,20 +4,16 @@
 NS(pf)
 
 
-window::window(const window_create_info& create_info)
-    : _width(create_info.width), _heigh(create_info.height), _title(create_info.title), _callback(create_info.callback) {}
-
-
 u32 window::get_width() const {
-    return _width;
+    return _create_info.width;
 }
 
 u32 window::get_height() const {
-    return _heigh;
+    return _create_info.height;
 }
 
 std::string_view window::get_title() const {
-    return _title;
+    return _create_info.title;
 }
 
 END_NS

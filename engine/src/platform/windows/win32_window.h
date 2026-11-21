@@ -8,17 +8,21 @@ NS(pf)
 
 class win32_window : public window {
 public:
-	win32_window(const window_create_info& create_info);
+	win32_window() = default;
 	~win32_window();
 	void pump_events() override;
+	
 
-	void setup_window_class();
-	void create_window();
-	void show_window();
-
+	
 	static key_code to_key_code(WPARAM vk, LPARAM data);
 	const native_handle* get_native_handle() const override;
     HWND get_hwnd() const;
+	static result<win32_window*> internal_create_new(const window_create_info& in_create_info);
+
+private:
+	void setup_window_class();
+	void create_window();
+	void show_window();
 
 
 private:
@@ -28,8 +32,7 @@ private:
 private:
 	windows_native_handle _native_handle;
 	WNDCLASSEXW	_window_class;
-	std::wstring _class_name;
-
+	std::wstring _class_name = L"vanmam";
 };
 
 END_NS

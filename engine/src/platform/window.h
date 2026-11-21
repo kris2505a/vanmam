@@ -21,13 +21,13 @@ struct window_create_info {
 
 class VANMAM_API window {
 public:
-    window(const window_create_info& create_info);
+    window() = default;
     virtual ~window() = default;
     u32 get_width() const;
     u32 get_height() const;
     std::string_view get_title() const;
 
-    static result <scope<window>, error> create_new(const window_create_info& create_info);
+    static result <scope<window>> create_new(const window_create_info& create_info);
 
     virtual void pump_events() = 0;
 
@@ -35,11 +35,7 @@ public:
 
 
 protected:
-	u32 _width;
-	u32 _heigh;
-	std::string _title;
-    CallbackFn _callback;
-
+	window_create_info _create_info;
 };
 
 

@@ -1,28 +1,52 @@
 #include "win32_window.h"
 #include "core/logger.h"
 
+#include <iostream>
+
 
 #include <windowsx.h>
 
 NS(pf)
 
-result<scope<window>, error> window::create_new(const window_create_info& create_info) {
-	auto win = new_scope<win32_window>(create_info);
-	
+result<scope<window>> window::create_new(const window_create_info& in_create_info) {
+	auto [result, win_ptr] = win32_window::internal_create_new(in_create_info);
+	if (result != status::success) {
+		return {
+			result,
+			nullptr
+		};
+	}
+
+	return {
+		status::success,
+		scope<window>(win_ptr)
+	};
+}
+
+result<win32_window*> win32_window::internal_create_new(const window_create_info& in_create_info) {
+	auto win = new_scope<win32_window>();
+	win->_create_info.width = in_create_info.width;
+	win->_create_info.height = in_create_info.height;
+	win->_create_info.title = in_create_info.title;
+	win->_create_info.callback = in_create_info.callback;
+
 	win->setup_window_class();
 	win->create_window();
 
-	if (!win->get_hwnd()) {
-		return failure { error{ "Failed to create window" } };
+	if (!win->_native_handle.handle) {
+		return {
+			status::failed_to_create_win32_window,
+			nullptr
+		};
 	}
-
 	win->show_window();
 
-	return std::move(win);
+	return result {
+		status::success,
+		win.release()
+	};
 }
 
-win32_window::win32_window(const window_create_info& create_info)
-	: window(create_info), _window_class({}), _class_name(L"vanmam") {}
 
 win32_window::~win32_window() {
 	DestroyWindow(_native_handle.handle);
@@ -45,7 +69,7 @@ LRESULT CALLBACK win32_window::win_proc(HWND hwnd, UINT msg, WPARAM wparam, LPAR
 		return DefWindowProc(hwnd, msg, wparam, lparam);
 	}
 
-	auto& callback = win->_callback;
+	auto& callback = win->_create_info.callback;
 
 	switch (msg) {
 
@@ -148,17 +172,23 @@ LRESULT CALLBACK win32_window::win_proc(HWND hwnd, UINT msg, WPARAM wparam, LPAR
 }
 
 void win32_window::setup_window_class() {
+
 	_window_class = WNDCLASSEXW{
 		.cbSize = sizeof(WNDCLASSEXW),
 		.lpfnWndProc = win32_window::win_proc,
 		.hInstance = _native_handle.instance,
 		.lpszClassName = _class_name.c_str()
 	};
-	RegisterClassExW(&_window_class);
+	auto atm = RegisterClassExW(&_window_class);
+	if (!atm) {
+		auto err = GetLastError();
+		VM_LOG(VM_FAT, "RegisterClassExW failed: {}", err);
+	}
 }
 
 void win32_window::create_window() {
 	std::wstring title = to_wide(get_title());
+	
 	_native_handle.handle = CreateWindowExW(
 		0,
 		_class_name.c_str(),
@@ -171,6 +201,12 @@ void win32_window::create_window() {
 		_native_handle.instance,
 		nullptr
 	);
+
+	if (!_native_handle.handle) {
+		DWORD err = GetLastError();
+		VM_LOG(VM_FAT, "CreateWindowExW failed: {}", err);
+	} 
+
 	SetWindowLongPtrW(_native_handle.handle, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(this));
 }
 
