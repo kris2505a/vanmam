@@ -2,7 +2,7 @@
 #include "platform/window.h"
 
 #include <Windows.h>
-#include "core/input/input_code.h"
+#include "core/input.h"
 
 NS(pf)
 

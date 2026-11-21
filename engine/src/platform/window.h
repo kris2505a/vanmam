@@ -1,8 +1,7 @@
 #pragma once
 #include "core/core.h"
-#include "core/types/types.h"
-#include "core/types/error.h"
-#include "event/event.h"
+#include "core/types.h"
+#include "core/events.h"
 
 #include <functional>
 

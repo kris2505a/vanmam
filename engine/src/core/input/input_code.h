@@ -1,5 +1,5 @@
 #pragma once
-#include "core/types/types.h"
+#include "core/types.h"
 
 NS_VANMAM
 

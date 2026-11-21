@@ -2,8 +2,5 @@ bin/
 obj/
 .vs/
 build/
-
-*.sln
-*.vcxproj
-*.user
-*.filters
+out/
+.cache/

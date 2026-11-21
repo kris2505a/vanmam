@@ -1,11 +1,7 @@
-#include "core/logger/log.h"
+#include "core/logger.h"
 #include "platform/window.h"
 
-#include "event/event.h"
-#include "event/dispatcher.h"
-
-#include "render_hw/factory.h"
-#include "render_hw/device.h"
+#include "core/events.h"
 
 
 bool running = true;
@@ -38,25 +34,6 @@ int main() {
     }
     
     auto window = std::move(*res);
-
-    auto fact_res = vm::rh::factory::create_new();
-    if (!fact_res) {
-        auto err = fact_res.error();
-        VM_LOG(VM_FAT, "Failed to create factory: {}", err);
-        return -1;
-    }
-
-    auto factory = std::move(*fact_res);
-
-    auto dev_res = vm::rh::device::create_new(factory.get());
-
-    if (!dev_res) {
-        auto err = dev_res.error();
-        VM_LOG(VM_FAT, "Failed to create device: {}", err);
-        return -1;
-    }
-
-    auto device = std::move(*dev_res);
 
     while (running) {
         window->pump_events();

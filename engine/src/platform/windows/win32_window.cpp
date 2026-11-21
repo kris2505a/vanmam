@@ -1,5 +1,5 @@
 #include "win32_window.h"
-#include "core/logger/log.h"
+#include "core/logger.h"
 
 
 #include <windowsx.h>

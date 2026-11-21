@@ -1,31 +1,26 @@
 [
 {
-  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
-  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Iengine\\src", "-IC:\\VulkanSDK\\1.4.363.1\\Include", "-D_UNICODE", "-DUNICODE", "-DVULKAN_HPP_NO_STRUCT_CONSTRUCTORS", "-DVULKAN_HPP_NO_EXCEPTIONS", "-DVULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1", "-DVM_SHARED_BUILD", "-DPROJECT_NAME=\"vanmam\"", "-DVM_DEBUG", "-DPF_WINDOWS", "-DWIN32_LEAN_AND_MEAN", "-DNOMINMAX", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\engine\\mingw\\x64\\debug\\engine\\src\\core\\logger\\log.cpp.obj", "engine\\src\\core\\logger\\log.cpp"],
-  "file": "engine\\src\\core\\logger\\log.cpp"
+  "directory": "C:/Users/krishna/projects/Vanmam/out/debug",
+  "command": "C:\\PROGRA~2\\MICROS~2\\18\\BUILDT~1\\VC\\Tools\\MSVC\\1452~1.370\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNOMINMAX -DPF_WINDOWS -DPROJECT_NAME=\\\"vanmam\\\" -DUNICODE -DVM_DEBUG -DVM_SHARED_BUILD -DWIN32_LEAN_AND_MEAN -D_UNICODE -Dengine_EXPORTS -IC:\\Users\\krishna\\projects\\Vanmam\\engine\\src /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /Foengine\\CMakeFiles\\engine.dir\\src\\core\\logger\\log.cpp.obj /Fdengine\\CMakeFiles\\engine.dir\\ /FS -c C:\\Users\\krishna\\projects\\Vanmam\\engine\\src\\core\\logger\\log.cpp",
+  "file": "C:/Users/krishna/projects/Vanmam/engine/src/core/logger/log.cpp",
+  "output": "C:/Users/krishna/projects/Vanmam/out/debug/engine/CMakeFiles/engine.dir/src/core/logger/log.cpp.obj"
 },
 {
-  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
-  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Iengine\\src", "-IC:\\VulkanSDK\\1.4.363.1\\Include", "-D_UNICODE", "-DUNICODE", "-DVULKAN_HPP_NO_STRUCT_CONSTRUCTORS", "-DVULKAN_HPP_NO_EXCEPTIONS", "-DVULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1", "-DVM_SHARED_BUILD", "-DPROJECT_NAME=\"vanmam\"", "-DVM_DEBUG", "-DPF_WINDOWS", "-DWIN32_LEAN_AND_MEAN", "-DNOMINMAX", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\engine\\mingw\\x64\\debug\\engine\\src\\platform\\window.cpp.obj", "engine\\src\\platform\\window.cpp"],
-  "file": "engine\\src\\platform\\window.cpp"
+  "directory": "C:/Users/krishna/projects/Vanmam/out/debug",
+  "command": "C:\\PROGRA~2\\MICROS~2\\18\\BUILDT~1\\VC\\Tools\\MSVC\\1452~1.370\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNOMINMAX -DPF_WINDOWS -DPROJECT_NAME=\\\"vanmam\\\" -DUNICODE -DVM_DEBUG -DVM_SHARED_BUILD -DWIN32_LEAN_AND_MEAN -D_UNICODE -Dengine_EXPORTS -IC:\\Users\\krishna\\projects\\Vanmam\\engine\\src /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /Foengine\\CMakeFiles\\engine.dir\\src\\platform\\window.cpp.obj /Fdengine\\CMakeFiles\\engine.dir\\ /FS -c C:\\Users\\krishna\\projects\\Vanmam\\engine\\src\\platform\\window.cpp",
+  "file": "C:/Users/krishna/projects/Vanmam/engine/src/platform/window.cpp",
+  "output": "C:/Users/krishna/projects/Vanmam/out/debug/engine/CMakeFiles/engine.dir/src/platform/window.cpp.obj"
 },
 {
-  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
-  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Iengine\\src", "-IC:\\VulkanSDK\\1.4.363.1\\Include", "-D_UNICODE", "-DUNICODE", "-DVULKAN_HPP_NO_STRUCT_CONSTRUCTORS", "-DVULKAN_HPP_NO_EXCEPTIONS", "-DVULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1", "-DVM_SHARED_BUILD", "-DPROJECT_NAME=\"vanmam\"", "-DVM_DEBUG", "-DPF_WINDOWS", "-DWIN32_LEAN_AND_MEAN", "-DNOMINMAX", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\engine\\mingw\\x64\\debug\\engine\\src\\platform\\windows\\win32_window.cpp.obj", "engine\\src\\platform\\windows\\win32_window.cpp"],
-  "file": "engine\\src\\platform\\windows\\win32_window.cpp"
+  "directory": "C:/Users/krishna/projects/Vanmam/out/debug",
+  "command": "C:\\PROGRA~2\\MICROS~2\\18\\BUILDT~1\\VC\\Tools\\MSVC\\1452~1.370\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNOMINMAX -DPF_WINDOWS -DPROJECT_NAME=\\\"vanmam\\\" -DUNICODE -DVM_DEBUG -DVM_SHARED_BUILD -DWIN32_LEAN_AND_MEAN -D_UNICODE -Dengine_EXPORTS -IC:\\Users\\krishna\\projects\\Vanmam\\engine\\src /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /Foengine\\CMakeFiles\\engine.dir\\src\\platform\\windows\\win32_window.cpp.obj /Fdengine\\CMakeFiles\\engine.dir\\ /FS -c C:\\Users\\krishna\\projects\\Vanmam\\engine\\src\\platform\\windows\\win32_window.cpp",
+  "file": "C:/Users/krishna/projects/Vanmam/engine/src/platform/windows/win32_window.cpp",
+  "output": "C:/Users/krishna/projects/Vanmam/out/debug/engine/CMakeFiles/engine.dir/src/platform/windows/win32_window.cpp.obj"
 },
 {
-  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
-  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Iengine\\src", "-IC:\\VulkanSDK\\1.4.363.1\\Include", "-D_UNICODE", "-DUNICODE", "-DVULKAN_HPP_NO_STRUCT_CONSTRUCTORS", "-DVULKAN_HPP_NO_EXCEPTIONS", "-DVULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1", "-DVM_SHARED_BUILD", "-DPROJECT_NAME=\"vanmam\"", "-DVM_DEBUG", "-DPF_WINDOWS", "-DWIN32_LEAN_AND_MEAN", "-DNOMINMAX", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\engine\\mingw\\x64\\debug\\engine\\src\\render_hw\\vulkan\\vk_device.cpp.obj", "engine\\src\\render_hw\\vulkan\\vk_device.cpp"],
-  "file": "engine\\src\\render_hw\\vulkan\\vk_device.cpp"
-},
-{
-  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
-  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Iengine\\src", "-IC:\\VulkanSDK\\1.4.363.1\\Include", "-D_UNICODE", "-DUNICODE", "-DVULKAN_HPP_NO_STRUCT_CONSTRUCTORS", "-DVULKAN_HPP_NO_EXCEPTIONS", "-DVULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1", "-DVM_SHARED_BUILD", "-DPROJECT_NAME=\"vanmam\"", "-DVM_DEBUG", "-DPF_WINDOWS", "-DWIN32_LEAN_AND_MEAN", "-DNOMINMAX", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\engine\\mingw\\x64\\debug\\engine\\src\\render_hw\\vulkan\\vk_factory.cpp.obj", "engine\\src\\render_hw\\vulkan\\vk_factory.cpp"],
-  "file": "engine\\src\\render_hw\\vulkan\\vk_factory.cpp"
-},
-{
-  "directory": "c:\\Users\\krishna\\projects\\Vanmam",
-  "arguments": ["C:\\mingw64\\bin\\clang++.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++23", "-Isandbox\\src", "-Iengine\\src", "-D_UNICODE", "-DUNICODE", "-DPROJECT_NAME=\"testbed\"", "-DPF_WINDOWS", "-Wall", "-Wextra", "-Wpedantic", "-o", "C:\\Users\\krishna\\projects\\Vanmam\\obj\\debug\\sandbox\\mingw\\x64\\debug\\sandbox\\src\\main.cpp.obj", "sandbox\\src\\main.cpp"],
-  "file": "sandbox\\src\\main.cpp"
-}]
+  "directory": "C:/Users/krishna/projects/Vanmam/out/debug",
+  "command": "C:\\PROGRA~2\\MICROS~2\\18\\BUILDT~1\\VC\\Tools\\MSVC\\1452~1.370\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DPF_WINDOWS -DPROJECT_NAME=\\\"sandbox\\\" -DUNICODE -D_UNICODE -IC:\\Users\\krishna\\projects\\Vanmam\\sandbox\\src -IC:\\Users\\krishna\\projects\\Vanmam\\engine\\src /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /Fosandbox\\CMakeFiles\\sandbox.dir\\src\\main.cpp.obj /Fdsandbox\\CMakeFiles\\sandbox.dir\\ /FS -c C:\\Users\\krishna\\projects\\Vanmam\\sandbox\\src\\main.cpp",
+  "file": "C:/Users/krishna/projects/Vanmam/sandbox/src/main.cpp",
+  "output": "C:/Users/krishna/projects/Vanmam/out/debug/sandbox/CMakeFiles/sandbox.dir/src/main.cpp.obj"
+}
+]

@@ -1,0 +1,15 @@
+C:/Users/krishna/projects/Vanmam/out/debug/CMakeFiles/copy_compile_commands.dir
+C:/Users/krishna/projects/Vanmam/out/debug/CMakeFiles/edit_cache.dir
+C:/Users/krishna/projects/Vanmam/out/debug/CMakeFiles/rebuild_cache.dir
+C:/Users/krishna/projects/Vanmam/out/debug/engine/CMakeFiles/engine.dir
+C:/Users/krishna/projects/Vanmam/out/debug/engine/CMakeFiles/edit_cache.dir
+C:/Users/krishna/projects/Vanmam/out/debug/engine/CMakeFiles/rebuild_cache.dir
+C:/Users/krishna/projects/Vanmam/out/debug/engine/src/core/CMakeFiles/edit_cache.dir
+C:/Users/krishna/projects/Vanmam/out/debug/engine/src/core/CMakeFiles/rebuild_cache.dir
+C:/Users/krishna/projects/Vanmam/out/debug/engine/src/platform/CMakeFiles/edit_cache.dir
+C:/Users/krishna/projects/Vanmam/out/debug/engine/src/platform/CMakeFiles/rebuild_cache.dir
+C:/Users/krishna/projects/Vanmam/out/debug/engine/src/render_hw/CMakeFiles/edit_cache.dir
+C:/Users/krishna/projects/Vanmam/out/debug/engine/src/render_hw/CMakeFiles/rebuild_cache.dir
+C:/Users/krishna/projects/Vanmam/out/debug/sandbox/CMakeFiles/sandbox.dir
+C:/Users/krishna/projects/Vanmam/out/debug/sandbox/CMakeFiles/edit_cache.dir
+C:/Users/krishna/projects/Vanmam/out/debug/sandbox/CMakeFiles/rebuild_cache.dir

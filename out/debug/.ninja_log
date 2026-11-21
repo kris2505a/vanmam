@@ -1,0 +1,18 @@
+# ninja log v7
+8	33	8169324324629551	C:/Users/krishna/projects/Vanmam/out/debug/CMakeFiles/cmake.verify_globs	9847ea2202e30011
+56	103	8169324325098896	CMakeFiles/copy_compile_commands	f3d9f721ded174bc
+56	103	8169324325098896	C:/Users/krishna/projects/Vanmam/out/debug/CMakeFiles/copy_compile_commands	f3d9f721ded174bc
+35	1390	8169324324898201	engine/CMakeFiles/engine.dir/src/core/logger/log.cpp.obj	29d616bfdeb1378d
+40	1466	8169324324953318	engine/CMakeFiles/engine.dir/src/platform/window.cpp.obj	a01217d2d6a9170f
+5	30	8169324733539833	C:/Users/krishna/projects/Vanmam/out/debug/CMakeFiles/cmake.verify_globs	9847ea2202e30011
+41	87	8169324733911116	CMakeFiles/copy_compile_commands	f3d9f721ded174bc
+41	87	8169324733911116	C:/Users/krishna/projects/Vanmam/out/debug/CMakeFiles/copy_compile_commands	f3d9f721ded174bc
+5	28	8169324938811226	C:/Users/krishna/projects/Vanmam/out/debug/CMakeFiles/cmake.verify_globs	9847ea2202e30011
+45	89	8169324939203028	CMakeFiles/copy_compile_commands	f3d9f721ded174bc
+45	89	8169324939203028	C:/Users/krishna/projects/Vanmam/out/debug/CMakeFiles/copy_compile_commands	f3d9f721ded174bc
+31	1322	8169324939071092	engine/CMakeFiles/engine.dir/src/core/logger/log.cpp.obj	29d616bfdeb1378d
+35	1450	8169324939111187	engine/CMakeFiles/engine.dir/src/platform/windows/win32_window.cpp.obj	478e336d06372b2c
+40	1578	8169324939163022	sandbox/CMakeFiles/sandbox.dir/src/main.cpp.obj	1c8d0531b086037f
+1451	1756	8169324956099477	C:/Users/krishna/projects/Vanmam/bin/Debug/engine.dll	8898bf95cb6f9a4c
+1451	1756	8169324956099477	C:/Users/krishna/projects/Vanmam/bin/Debug/engine.lib	8898bf95cb6f9a4c
+1757	2032	8169324956331299	C:/Users/krishna/projects/Vanmam/bin/Debug/sandbox.exe	1c4f4c7a9abc2484
